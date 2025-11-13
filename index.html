@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Bambi Petshop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header class="index-background">
+        <nav class="navbar navbar-expand-lg bg-white position-fixed top-0 start-0 w-100 z-3">
+          <div class="container-fluid">
+            <a href="index.html">
+             <img 
+              class="logotipo-imagen" 
+              src="./IMG/logo-bambi-petshop.png" 
+              alt="Logotipo Bambi Petshop"
+             /> 
+            </a>
+            <button 
+              class="navbar-toggler" 
+              type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation"
+          >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item"> <a class="nav-link active" href="../index.html">Productos</a></li>
+              <li class="nav-item"> <a class="nav-link" href="../index.html">Nuestra historia</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html">Trabajá con nosotros</a></li>
+              <li class="nav-item"><a class="nav-link" href="../index.html">Adoptá un perrito</a></li>
+             </ul>
+            </div>
+          </div>
+        </nav>
+
+
+        <section class="productos-header-inferior">
+         <h1 class="texto-productos"> Todo lo que necesitás para el cuidado de tu mascota</h1>
+         <p class="texto-productos-descripcion">
+                Mimá a tu fiel compañero con nuestros productos seleccionados con amor.
+         </p>
+        </section>
+    </header>
+  
+    <main>
+       <!--Sección cards de productos-->
+       <section class="cards-secciones-container my-4">
+        <section class="card-seccion">
+            <img class="card-seccion-imagen" src="./IMG/abrigo-corderito.webp" alt="abrigo-para-perro-de-corderito">
+            <h3 class="my-2 fs-4 card-seccion-titulo mx-2">Abrigo de corderito</h3>
+            <p class="mx-2">$30.190</p>
+            <p class="mx-2">Buzo polera de corderito rosa. Talles S, M y L</p>
+            <button class="btnAgregarDesdeCard" data-producto="Abrigo de corderito">Agregar al carrito</button>
+        </section> 
+
+        <section class="card-seccion">
+            <img class="card-seccion-imagen" src="./IMG/alfombra-olfativa.webp" alt="alfombra-olfativa-para-perros">
+            <h3 class="my-2 fs-4 card-seccion-titulo mx-2">Alfombra olfativa</h3>
+            <p class="mx-2">$66.500</p>
+            <p class="mx-2">Alfombra de estimulación cognitiva de 30x40.</p>
+            <button class="btnAgregarDesdeCard" data-producto="Alfombra olfativa">Agregar al carrito</button>
+        </section> 
+
+        <section class="card-seccion">
+            <img class="card-seccion-imagen" src="./IMG/bandeja-lickmat.webp" alt="bandeja-para-lamer-para-perros">
+            <h3 class="my-2 fs-4 card-seccion-titulo mx-2">Lickimat</h3>
+            <p class="mx-2">$22.000</p>
+            <p class="mx-2">Bandeja para lamer para perros anti-estrés. Material: silicona con ventosas.</p>
+            <button class="btnAgregarDesdeCard" data-producto="Lickimat">Agregar al carrito</button>
+        </section> 
+    
+        <section class="card-seccion">
+            <img class="card-seccion-imagen" src="./IMG/campera-puffer.webp" alt="campera-puffer-para-perros">
+            <h3 class="my-2 fs-4 card-seccion-titulo mx-2">Campera tipo puffer</h3>
+            <p class="mx-2">$40.690</p>
+            <p class="mx-2">Color: plateado. Talles: S, M y L.</p>
+            <button class="btnAgregarDesdeCard" data-producto="Campera tipo puffer">Agregar al carrito</button>
+        </section> 
+
+        <section class="card-seccion">
+            <img class="card-seccion-imagen" src="./IMG/comedero-naranja.webp" alt="comedero-naranja-para-perros">
+            <h3 class="my-2 fs-4 card-seccion-titulo mx-2">Comedero</h3>
+            <p class="mx-2">$39.290</p>
+            <p class="mx-2">Comedero con lickimat.</p>
+            <button class="btnAgregarDesdeCard" data-producto="Comedero">Agregar al carrito</button>
+        </section> 
+
+        <section class="card-seccion">
+            <img class="card-seccion-imagen" src="./IMG/cortauñas.webp" alt="cortauñas-para-perros">
+            <h3 class="my-2 fs-4 card-seccion-titulo mx-2">Cortauñas</h3>
+            <p class="mx-2">$14.390</p>
+            <p class="mx-2">Material: acero inoxidable. Ideal para mantener las uñas de tu perro en óptimas condiciones.</p>
+            <button class="btnAgregarDesdeCard" data-producto="Cortauñas">Agregar al carrito</button>
+        </section> 
+
+        <section class="card-seccion">
+            <img class="card-seccion-imagen" src="./IMG/kong-clasico.webp" alt="juguete-para-perros-kong-clasico">
+            <h3 class="my-2 fs-4 card-seccion-titulo mx-2">Juguete Kong clásico</h3>
+            <p class="mx-2">$64.990</p>
+            <p class="mx-2">Herramienta de estimulación mental y entretenimiento.</p>
+            <button class="btnAgregarDesdeCard" data-producto="Juguete Kong clásico">Agregar al carrito</button>
+        </section> 
+
+        <section class="card-seccion">
+            <img class="card-seccion-imagen" src="./IMG/pretal-anti-tirones.webp" alt="pretal-anti-tirones-para-perros">
+            <h3 class="my-2 fs-4 card-seccion-titulo mx-2">Pretal antitirones</h3>
+            <p class="mx-2">$30.390</p>
+            <p class="mx-2">Pretal H Acolchado Premium Anti Tirones.</p>
+            <button class="btnAgregarDesdeCard" data-producto="Pretal antitirones">Agregar al carrito</button>
+        </section> 
+
+        <section class="card-seccion">
+            <img class="card-seccion-imagen" src="./IMG/soga-peluche.webp" alt="juguete-soga-con-peluche-para-perros">
+            <h3 class="my-2 fs-4 card-seccion-titulo mx-2">Juguete Soga con Peluche</h3>
+            <p class="mx-2">$38.690</p>
+            <p class="mx-2">Pensada especialmente para perros que necesitan un empujoncito extra para engancharse con el juego de tironeo.</p>
+            <button class="btnAgregarDesdeCard" data-producto="Juguete Soga con Peluche">Agregar al carrito</button>
+        </section> 
+       </section> 
+       
+       <!-- Sección Carrito -->
+       <section id="pedido" class="carrito-section">
+        <h2 class="mb-4">HACÉ TU PEDIDO</h2>
+
+        <div class="pedido-form">
+          <label for="selectProducto" class="form-label">Seleccioná un producto:</label>
+          <select id="selectProducto" class="form-select w-75 mx-auto">
+            <option value="">-- Elegí uno --</option>
+            <option value="Abrigo de corderito" data-precio="30190">Abrigo de corderito – $30.190</option>
+            <option value="Alfombra olfativa" data-precio="66500">Alfombra olfativa – $66.500</option>
+            <option value="Lickimat" data-precio="22000">Lickimat – $22.000</option>
+            <option value="Campera tipo puffer" data-precio="40690">Campera tipo puffer – $40.690</option>
+            <option value="Comedero" data-precio="39290">Comedero – $39.290</option>
+            <option value="Cortauñas" data-precio="14390">Cortauñas – $14.390</option>
+            <option value="Juguete Kong clásico" data-precio="64990">Juguete Kong clásico – $64.990</option>
+            <option value="Pretal antitirones" data-precio="30390">Pretal antitirones – $30.390</option>
+            <option value="Juguete Soga con Peluche" data-precio="38690">Juguete Soga con Peluche – $38.690</option>
+          </select>
+
+          <label for="cantidad" class="form-label mt-3">Cantidad:</label>
+          <input type="number" id="cantidad" min="1" value="1" class="form-control w-50 mx-auto">
+
+          <p class="mt-3">Subtotal: <strong>$<span id="subtotal">0</span></strong></p>
+
+          <button type="button" id="btnAgregar" class="card-seccion-btn mt-3 w-50">Agregar al carrito</button>
+        </div>
+
+        <div id="carrito" class="mt-5">
+          <h3 class="mb-3">Tu carrito</h3>
+          <ul id="listaCarrito" class="list-unstyled"></ul>
+          <p class="mt-3 fs-4">Total: <strong>$<span id="totalCarrito">0</span></strong></p>
+        </div>
+        
+        <button type="button" id="btnFinalizar" class="card-seccion-btn mt-3 w-50">Finalizar pedido</button>  
+        <button type="button" id="btnHistorial" class="card-seccion-btn mt-3 w-50">Ver historial de pedidos</button>
+      </section>
+    </main>
+
+    <footer>
+        <p class="text-white text-center fs-10">© 2025 Bambi Petshop</p>
+
+        <div class="d-flex justify-content-center column-gap-3">
+            <img src="./IMG/whatsapp.png" alt="whatsapp-logo">
+            <img src="./IMG/instagram-logo.png" alt="instagram-logo">
+            <img src="./IMG/tik-tok.png" alt="tik-tok-logo">
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/productos.js"></script>
+    <script src="./JS/carrito.js"></script>
+  </body>
+</html>
+    
