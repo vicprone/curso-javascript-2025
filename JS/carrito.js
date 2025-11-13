@@ -1,5 +1,4 @@
-// carrito.js
-// Lógica del carrito, UI y persistencia. Depende de window.productosDisponibles (poblado por productos.js).
+
 (() => {
   const STORAGE_KEY = "carrito";
 
@@ -15,7 +14,7 @@
 
     let carrito = [];
 
-    // --- FUNCIONES BASE ---
+    // --- funciones base ---
     function cargarCarrito() {
       try {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -104,11 +103,11 @@
       });
     }
 
-    // --- EVENTOS ---
+    // --- eventos ---
     selectProducto?.addEventListener("change", actualizarSubtotalUI);
     cantidadInput?.addEventListener("input", actualizarSubtotalUI);
 
-    // AGREGAR PRODUCTO MANUALMENTE
+    // agregar producto al carrito
     btnAgregar?.addEventListener("click", e => {
       e.preventDefault();
       carrito = cargarCarrito();
@@ -131,7 +130,7 @@
       if (cantidad < 1) {
         Swal.fire({
           title: 'Cantidad inválida ⚠️',
-          text: 'La cantidad debe ser al menos 1.',
+          text: 'La cantidad debe ser por lo menos 1.',
           icon: 'info',
           confirmButtonColor: '#c995c6'
         });
@@ -179,7 +178,7 @@
         let productoInfo = productos.find(p => p.nombre === productoSeleccionado);
         let precio = productoInfo ? Number(productoInfo.precio) : null;
 
-        // 2) fallback: buscar en las <option> del select (tu HTML ya trae data-precio)
+        // 2) fallback: buscar en las <option> del select 
         if (precio === null || Number.isNaN(precio)) {
           const option = Array.from(selectProducto.options).find(opt => opt.value === productoSeleccionado);
           if (option && option.dataset && option.dataset.precio) {
@@ -187,7 +186,7 @@
           }
         }
 
-        // 3) fallback: data-precio directo en el botón (si lo agregás)
+        // 3) fallback: data-precio directo en el botón 
         if ((precio === null || Number.isNaN(precio)) && btn.dataset.precio) {
           precio = Number(btn.dataset.precio);
         }
